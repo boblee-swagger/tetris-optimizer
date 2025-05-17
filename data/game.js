@@ -8,72 +8,43 @@ class game {
         this.gameOver = false;
         this.gamePaused = false;
         this.gameStarted = false;
+        this.MAX_WIDTH = 10;
+        this.MAX_HEIGHT = 20;
     }
 
-    tetro_O() {
-        return {
-            shape: [
-                [1, 1],
-                [1, 1],
-            ],
-            color: "#ffec33",
-        };
+    createBoard() {
     }
-    tetro_I() {
-        return {
-            shape: [
-                [1, 1, 1, 1],
-            ],
-            color: "#a1fbff",
-        };
+
+    displayBoard() {
     }
-    tetro_J() {
-        return {
-            shape: [
-                [0, 1],
-                [0, 1],
-                [1, 1],
-            ],
-            color: "#0f3dfa",
-        };
+    
+    startGame() {
     }
-    tetro_L() {
-        return {
-            shape: [
-                [1, 0],
-                [1, 0],
-                [1, 1],
-            ],
-            color: "#f79600",
-        };
+
+    updateBoard() {
     }
-    tetro_S() {
-        return {
-            shape: [
-                [1, 1, 0],
-                [0, 1, 1],
-            ],
-            color: "#00ff8c",
-        };
+
+    updateScore() {
     }
-    tetro_T() {
-        return {
-            shape: [
-                [1, 1, 1],
-                [0, 1, 0],
-            ],
-            color: "#00ffff",
-        };
+
+    updateLives() {
     }
-    tetro_Z() {
-        return {
-            shape: [
-                [0, 1, 1],
-                [1, 1, 0],
-            ],
-            color: "#ff00ff",
-        };
+
+    updateLevel() {
+    }
+
+    updateGameSpeed() {
+    }
+
+    moveTetromino() {
+    }
+
+    displayStats() {
     }
 }
 
-const game = new game();
+
+
+
+
+
