@@ -1,71 +1,92 @@
-class Tetromino {
+class Tetromino{
     constructor(shape, color) {
         this.shape = shape;
         this.color = color;
+        this.position = {x : 0, y : 0};
     }
 
     tetro_O = () => {
         return new Tetromino([
-                [0,0,0,0],
-                [0,1,1,0],
-                [0,1,1,0],
-                [0,0,0,0],
+                [1,1],
+                [1,1],
             ],
             "#ffec33");
+            {5, 3};
     }
     tetro_I = () => {
         return new Tetromino([
-                [0,0,0,1],
-                [0,0,0,1],
-                [0,0,0,1],
-                [0,0,0,1],
+                [2,2,2,2],
             ],
             "#a1fbff");
+            {0, 0};
+
     }
     tetro_J = () => {
         return new Tetromino([
-            [0,0,0,0],
-            [0,0,1,0],
-            [0,0,1,0],
-            [0,1,1,0],
+                [3,3,3],
+                [0,3,0],
             ],
             "#0f3dfa");
+            {0, 0};
+
     }
     tetro_L = () => {
         return new Tetromino([
-                [0,0,0,0],
-                [1,0,0,0],
-                [1,0,0,0],
-                [1,1,0,0],
+                [0,4],
+                [0,4],
+                [4,4],
             ],
             "#f79600");
+            {0, 0};
+
     }
     tetro_S = () => {
         return new Tetromino([
-                [0,0,0,0],
-                [0,1,1,0],
-                [0,0,1,1],
-                [0,0,0,0],
+                [0,5,5],
+                [5,5,0],
             ],
             "#00ff8c");
+            {0, 0};
+
     }
     tetro_T = () => {
         return new Tetromino([
-                [1,1,1,0],
-                [0,1,0,0],
-                [0,1,0,0],
-                [0,0,0,0],
+                [6,0],
+                [6,0],
+                [6,6],
             ],
             "#00ffff");
+            {0, 0};
+
     }
     tetro_Z = () => {
         return new Tetromino([
-                [0,0,0,0],
-                [0,0,1,1],
-                [0,1,1,0],
-                [0,0,0,0],
+                [0,7,7],
+                [7,7,0],
             ],
             "#ff00ff");
+            {0, 0};
+    }
+    //generate a random tetromino from the between the seven tetrominos
+    generateTetro = () => {
+        let num = Math.ceil(Math.random() * 7);
+        
+        switch (num) {
+            case 1:
+                return this.tetro_I();
+            case 2: 
+                return this.tetro_J();
+            case 3:
+                return this.tetro_L();
+            case 4:
+                return this.tetro_O();
+            case 5:
+                return this.tetro_S();
+            case 6:
+                return this.tetro_T();
+            case 7:
+                return this.tetro_Z();
+        }
     }
 
     rotate(tetro) {
@@ -82,7 +103,22 @@ class Tetromino {
           }
         }
         return tetro;
-      }
+    }
+
+    moveLeft(tetro) {
+       
+    }
+
+    moveRight(tetro) {
+        
+    }
+
+    moveDown(tetro) {
+      
+    }
+
+    
+
 }
 
 export default Tetromino;

@@ -1,0 +1,38 @@
+#game_window{
+    display: grid;
+    grid-template-rows: 1.4fr 1fr 7fr 1fr;
+    gap: 8px;
+    margin: auto;
+    margin-top: 10vh;
+    width: 30vw;
+    height: 80vh;
+}
+
+ #game_board, #lives, #score{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+
+} 
+
+#score{
+    width: 50%;
+    margin: auto;
+}
+
+#board_aside{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+#line, #random_pieces{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: black;
+}
+
+
+
