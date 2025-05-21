@@ -87,37 +87,7 @@ class Tetromino{
             case 7:
                 return this.tetro_Z();
         }
-    }
-
-    rotate(tetro) {
-        const original = tetro.shape.map(row => [...row]);
-        const newRows = original[0].length;
-        const newCols = original.length;
-        
-        // Create a new shape array with correct dimensions
-        tetro.shape = Array(newRows).fill().map(() => Array(newCols).fill(0));
-        
-        for (let i = 0; i < newRows; i++) {
-          for (let j = 0; j < newCols; j++) {
-            tetro.shape[i][j] = original[newCols - 1 - j][i];
-          }
-        }
-        return tetro;
-    }
-
-    moveLeft(tetro) {
-       
-    }
-
-    moveRight(tetro) {
-        
-    }
-
-    moveDown(tetro) {
-      
-    }
-
-    
+    }  
 
 }
 
